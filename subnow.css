@@ -1,0 +1,350 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* SUBSCRIBE NOW BANNER */
+.subscribe-banner {
+    width: 100vw;
+    height: 180px;
+    background-color: #FDFAE2;
+    background-image: url('assets/9_bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subscribe-button {
+    width: 750px;
+    height: 80px;
+    background-color: #54341C;
+    color: #FDFAE2;
+    font-size: 3.5rem;
+    font-family: 'sirenia', sans-serif;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #ba6f31;
+    border: 1px solid #2C2C2C;
+    transform: translateY(-52%) scale(1.02);
+    transition: transform 0.2s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.subscribe-link {
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+    .subscribe-button {
+        width: 70%;
+        height: auto;
+        font-size: 2.5rem;
+        padding: 0.95rem 2rem;
+    }
+}
+
+/* FINAL SUBSCRIBE STYLES */
+.subscribe-now-final-section {
+    background-color: #FDFAE2;
+    background-image: url('assets/9_final-subnow-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 626px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.subscribe-now-final-wrapper {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.subscribe-final-heading {
+    font-family: 'sirenia', sans-serif;
+    color: #485E32;
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 6rem 0 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.stitch-underline {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.subscribe-final-subtext {
+    font-family: 'bilo', serif;
+    font-weight: 500;
+    color: #54341C;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    margin-top: -1.05rem;
+    line-height: 1.4;
+    text-align: center;
+    padding: 0 1.5rem;
+}
+
+.final-subscribe-button {
+    width: 100%;
+    max-width: 572px;
+    height: 65px;
+    background-color: #485E32;
+    color: #FDFAE2;
+    font-family: 'alexandria', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-weight: 500;
+    border: 1px solid #2C2C2C;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.final-subscribe-button:hover {
+    background-color: #ba6f31;
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Tablet view */
+@media (max-width: 992px) {
+    .subscribe-now-final-section {
+        padding: 3rem 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .subscribe-final-heading {
+        font-size: 3rem;
+        margin-top: 1.5rem;
+    }
+
+    .final-subscribe-button {
+        width: 80%;
+        max-width: 400px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 576px) {
+    .subscribe-now-final-section {
+        padding: 2.5rem 1rem;
+    }
+
+    .subscribe-final-heading {
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+
+    .stitch-underline {
+        display: none;
+    }
+
+    .subscribe-final-subtext {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+
+    .final-subscribe-button {
+        width: 80%;
+        max-width: 300px;
+        height: 55px;
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra Small Phones (≤375px) */
+@media (max-width: 375px) {
+    .subscribe-final-heading {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile-only bg img for final subscribe section */
+.mobile-subnow-bg {
+    display: none;
+}
+
+/* MOBILE BG MEDIA QUERY */
+@media (max-width: 768px) {
+    .subscribe-now-final-section {
+        position: relative;
+        background-image: none;
+    }
+
+    .mobile-subnow-bg {
+        display: block;
+        background-image: url('assets/9_mobile-final-subnow-bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+
+    .subscribe-now-final-wrapper {
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* MODAL STYLES */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #FFCD8B;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 10px 4px 20px rgba(0, 0, 0, 0.25);
+    max-width: 400px;
+    width: 100%;
+}
+
+.modal-content h2 {
+    font-family: 'sirenia', sans-serif;
+    color: #54341C;
+    font-size: 3.5rem;
+    margin-bottom: 0;
+}
+
+.modal-content p {
+    font-family: 'Alexandria', sans-serif;
+    font-weight: 600;
+    color: #54341C;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+}
+
+.confirm-btn {
+    font-family: 'Alexandria', sans-serif;
+    padding: 0.75rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    font-family: 'Alexandria', sans-serif;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #54341C;
+    color: #FDFAE2;
+}
+
+.cancel-btn:hover {
+    background-color: #ba6f31;
+}
+
+.confirm-btn {
+    background-color: #54341C;
+    color: #FDFAE2;
+}
+
+.confirm-btn:hover {
+    background-color: #ba6f31;
+}
+
+/* MODAL ANIMATION */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeOutScale {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+}
+
+/* Animate modal content */
+.modal-content.show {
+    animation: fadeInScale 0.3s ease forwards;
+}
+
+.modal-content.hide {
+    animation: fadeOutScale 0.3s ease forwards;
+}

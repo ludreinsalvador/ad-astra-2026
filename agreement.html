@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Notice</title>
+
+    <!-- MAIN FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/nbn0rmc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- MAIN CSS FOR AGREEMENT -->
+    <link rel="stylesheet" href="agreement.css">
+    <style>
+        /* Alexandria font for SweetAlert modal */
+        .swal-modal,
+        .swal-title,
+        .swal-text,
+        .swal-button {
+            font-family: "Alexandria", sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="agreement-wrapper">
+        <div class="step-indicator">
+            <span class="step-number">Step 2</span>
+            <span class="step-total">of 3</span>
+        </div>
+
+        <h1 class="agreement-title">Privacy Notice</h1>
+        <div class="agreement-text">
+            <p>De La Salle-College of Saint Benilde (DLS-CSB) respects your right to privacy and is committed to protect
+                <br>the confidentiality of your personal information. DLS-CSB is bound to comply with the Data Privacy
+                Act
+                of 2012 (RA 10173),<br>its Implementing Rules and Regulations and relevant issuances of the National
+                Privacy Commission.
+            </p>
+
+            <p>It has adapted reasonable administrative, physical, and technical measures to prevent loss, misuse, and
+                alteration of the information under<br>our control. However, no method of transmission over the internet
+                or
+                method of electronic storage is 100% secure.</p>
+
+            <p>By filling out this form, you are consenting to the collection, processing, and use of the information in
+                accordance with this privacy notice.<br>The following information are collected and processed:</p>
+
+            <ul>
+                <li>Student's name</li>
+                <li>Student number</li>
+                <li>Year and course</li>
+                <li>Email address</li>
+                <li>Home address</li>
+                <li>Mobile number</li>
+                <li>Landline number</li>
+                <li>Representative's Name</li>
+                <li>Representative's Home Address</li>
+                <li>Representative's Mobile Number</li>
+                <li>Representative's Landline Number</li>
+            </ul>
+
+            <p>Only authorized individuals from the center/office and other offices will have access to this information
+                and will not be disclosed to third parties without your permission. The information you have provided is
+                used for any or all of the following: access provision, attendance,
+                monitoring, evaluation, documentation, and communication purposes. </p>
+
+            <p>The information is collected and
+                stored through Ad Astra's database hosted by Bluehost. De La Salle-College of Saint Benilde (DLS-CSB)
+                shall only retain the said personal information until it serves its purpose, after which it shall be
+                securely disposed of. If you have concerns and queries on Data Privacy, email <a
+                    href="mailto:dpo@benilde.edu.ph">dpo@benilde.edu.ph</a>.</p>
+        </div>
+    </div>
+
+    <div class="agreement-checkbox">
+        <input type="checkbox" id="agree">
+        <label for="agree">I have read and understood the Privacy Notice.</label>
+    </div>
+
+    <div class="agreement-note">
+        By proceeding to STEP 3, you have read and understood<br>the Privacy Notice stated above.
+    </div>
+
+    <div class="agreement-button">
+        <div class="button-row">
+            <a href="terms.html" class="go-back-mobile">Go Back</a>
+            <a href="javascript:void(0);" id="nextBtn" class="next-button disabled">NEXT</a>
+        </div>
+        <div class="go-back-desktop">
+            <a href="subnow.html">Go Back</a>
+        </div>
+    </div>
+
+    <div class="bottom-assets">
+        <img src="assets/11_bottom-assets.png" alt="Bottom Decoration">
+    </div>
+
+    <script src="script.js"></script>
+
+    <!-- JS SCRIPT FOR AGREEMENT'S "NEXT" BUTTON -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkbox = document.getElementById('agree');
+            const nextBtn = document.getElementById('nextBtn');
+
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    nextBtn.classList.remove('disabled');
+                } else {
+                    nextBtn.classList.add('disabled');
+                }
+            });
+
+            nextBtn.addEventListener('click', function (event) {
+                if (checkbox.checked) {
+                    swal({
+                        title: "Proceed to Step 3?",
+                        text: "By clicking 'Proceed,' you are agreeing to our Privacy Policy.",
+                        icon: "warning",
+                        buttons: ["Cancel", "Proceed"],
+                        dangerMode: true,
+                    }).then((willProceed) => {
+                        if (willProceed) {
+                            window.location.href = "subnow.html";  // Replace with actual URL for Step 2
+                        }
+                    });
+                } else {
+                    swal("Notice", "Please agree to the Privacy Policy first.", "error");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

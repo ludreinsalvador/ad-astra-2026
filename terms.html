@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions</title>
+    
+    <!-- MAIN FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/nbn0rmc.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <!-- MAIN CSS FOR TNC -->
+    <link rel="stylesheet" href="terms.css">
+    <style>
+        /* Alexandria font for SweetAlert modal */
+        .swal-modal,
+        .swal-title,
+        .swal-text,
+        .swal-button {
+            font-family: "Alexandria", sans-serif !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="terms-wrapper">
+        <div class="terms-header">
+            <div class="step-indicator">
+                <span class="step-number">Step 1</span>
+                <span class="step-total">of 3</span>
+            </div>
+            <h1 class="terms-title">Terms and Conditions</h1>
+        </div>
+
+        <div class="iframe-container">
+            <iframe class="iframe1"
+                src="https://docs.google.com/document/d/e/2PACX-1vQIPQZQTiDDn2snpPIcxQtdcuJ00pJIRf04zxJCpV0XhMUEVejv5DcnlA_iOEcFRs64C-2BGXX-JOsx/pub?embedded=true"
+                frameborder="1" scrolling="auto" style="border-radius:5px;box-shadow: 5px 5px 5px grey;"></iframe>
+        </div>
+    </div>
+
+    <div class="terms-checkbox">
+        <input type="checkbox" id="agree">
+        <label for="agree">I have read and understood the Terms and Conditions.</label>
+    </div>
+
+    <div class="terms-note">
+        By proceeding to STEP 1, you have read and understood<br>the Terms and Conditions stated above.
+    </div>
+
+    <div class="terms-button">
+        <div class="button-row">
+            <a href="agreement.html" class="go-back-mobile">Go Back</a>
+            <a href="javascript:void(0);" id="nextBtn" class="next-button disabled">NEXT</a>
+        </div>
+        <div class="go-back-desktop">
+            <a href="subnow.html">Go Back</a>
+        </div>
+    </div>
+
+    <div class="bottom-assets">
+        <img src="assets/12_bottom-assets.png" alt="Bottom Decoration">
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

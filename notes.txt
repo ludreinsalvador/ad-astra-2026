@@ -1,0 +1,23 @@
+Assigned Sections:
+- "Subscribe Now!" banner and button                        --> subnow.html
+- "How to subsribe?"                                        --> subnow.html
+    - Agreement (Policy Notice)                             --> agreement.html
+    - TnC                                                   --> terms.html
+- Final subscribe now section and button + "Wait!" modal    --> subnow.html
+
+===
+
+Draft/Copies:
+- hts.html (How to subscribe?)                              <-- you may kindly ignore this due to having draft codes and not updated.
+
+===
+
+- subnow.html includes:
+    - "Subscribe Now!" banner and button
+    - "How to subsribe?" contents
+    - Final subscribe now section and button + "Wait!" modal
+
+===
+
+/assets
+- optimized via tinypng.

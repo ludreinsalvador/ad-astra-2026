@@ -1,0 +1,459 @@
+/* BASE STYLES AND LAYOUT */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'bilo', sans-serif;
+}
+
+.hts-wrapper {
+    padding: 5vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+}
+
+.hts-wrapper,
+.hts-step-section {
+    margin-bottom: 0;
+}
+
+/* HEADER SECTION */
+.hts-header {
+    font-family: 'sirenia', sans-serif;
+    font-weight: 700;
+    font-size: clamp(30px, 5vw, 70px);
+    color: #485E32;
+    margin: 0 0 -10px;
+    text-align: left;
+    word-break: break-word;
+}
+
+.hts-subtext {
+    font-weight: 500;
+    font-family: 'bilo', sans-serif;
+    font-size: clamp(16px, 3vw, 35px);
+    color: #485E32;
+    margin: 0 0 60px;
+    text-align: left;
+    word-break: break-word;
+}
+
+/* STEPS SECTION */
+.hts-steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px 50px;
+    margin: 0 auto;
+}
+
+.hts-step {
+    flex: 1 1 300px;
+    min-width: 250px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 8px;
+}
+
+.hts-step-header {
+    display: flex;
+    gap: 10px;
+}
+
+.hts-step-number {
+    font-family: 'sirenia', sans-serif;
+    font-weight: 700;
+    font-size: clamp(32px, 4vw, 64px);
+    color: #485E32;
+    min-width: 50px;
+    text-align: right;
+}
+
+.hts-step-header h2 {
+    font-family: 'bilo', sans-serif;
+    font-weight: 500;
+    font-size: clamp(16px, 2vw, 25px);
+    color: #54341C;
+    margin: 0;
+}
+
+.hts-step-content p {
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #2C2C2C;
+    margin: 0;
+    word-break: break-word;
+}
+
+.hts-step-content a {
+    color: #2C2C2C;
+    text-decoration: underline;
+}
+
+.hts-step-content {
+    margin-bottom: 6px;
+}
+
+/* Hover color links */
+.hts-step-content a[href="theadstra.org"]:hover,
+.hts-step-content a[href="agreement.html"]:hover,
+.hts-step-content a[href*="https://docs.google.com/document/d/e/2PACX-1vQIPQZQTiDDn2snpPIcxQtdcuJ00pJIRf04zxJCpV0XhMUEVejv5DcnlA_iOEcFRs64C-2BGXX-JOsx/pub?embedded=true"]:hover,
+.hts-step-content a[href*="benilde.edu.ph/payonline"]:hover,
+.hts-step-content a[href*="Benilde-accredited"]:hover,
+.hts-step-content a[href*="drive.google.com/file/d/1cnalMz-BlZybhDHGNP6UzeEFVoUnzQ79"]:hover {
+    color: #ba6f31;
+}
+
+/* ASSETS */
+.hts-bottom-asset {
+    position: relative;
+    bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hts-bottom-asset {
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.hts-bottom-asset img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* UTILITY */
+.desktop-only {
+    display: block !important;
+}
+
+
+/* MEDIA QUERIES */
+/* Mid-sized laptops */
+@media (max-width: 1400px) and (min-width: 769px) {
+    .hts-step {
+        flex: 1 1 calc(50% - 30px);
+        max-width: 50%;
+        font-size: -2rem;
+        margin-top: 0.05rem;
+    }
+
+    .hts-steps {
+        justify-content: left;
+        margin-top: -1.5rem;
+    }
+
+    .hts-bottom-asset {
+        margin-bottom: 0;
+    }
+
+    .hts-step-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Large Screens or XL Desktops */
+@media (min-width: 1440px) {
+    .hts-step-number {
+        font-size: 50px;
+        text-align: left;
+    }
+
+    .hts-step-header h2 {
+        font-size: 20px;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    .hts-step {
+        margin-top: 0;
+    }
+
+    .hts-step-content p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .hts-bottom-asset {
+        margin-bottom: 0;
+    }
+}
+
+/* Extra-Large Screens (≥1600px) */
+@media (min-width: 1600px) {
+    .hts-subtext {
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .hts-step-number {
+        font-size: 90px;
+    }
+
+    .hts-step-header h2 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+
+    .hts-step-content {
+        font-size: 18px;
+    }
+
+    .hts-step-content p {
+        font-size: 18px;
+    }
+}
+
+/* Ultra-Wide Screens (≥1920px) */
+@media (min-width: 1920px) {
+    .hts-subtext {
+        text-align: left;
+        margin-right: 100px;
+    }
+
+    .hts-step-number {
+        font-size: 60px;
+    }
+
+    .hts-step-header h2 {
+        font-size: 32px;
+    }
+
+    .hts-step-content p {
+        font-size: 23px;
+    }
+
+    .hts-bottom-asset img {
+        max-height: 100%;
+    }
+}
+
+/* Laptops (≤1024px) */
+@media (max-width: 1024px) {
+    .hts-header {
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .hts-subtext {
+        font-size: 25px;
+        text-align: left;
+        margin-right: 80px;
+    }
+
+    .hts-step-header h2 {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .hts-step-content p {
+        font-size: 18px;
+    }
+
+    .hts-bottom-asset img {
+        max-height: 100%;
+    }
+}
+
+/* For Ctrl - to 90% */
+@media (max-width: 1800px) and (min-width: 1600px) {
+    .hts-step-number {
+        font-size: 50px;
+    }
+
+    .hts-step-header {
+        margin-top: 2rem;
+    }
+}
+
+/* Tablets and Phones (≤768px) */
+@media (max-width: 768px) {
+    .hts-header {
+        font-size: 3.05rem;
+        margin: 2rem 0 2px;
+        text-align: center;
+    }
+
+    .hts-subtext {
+        font-size: 2rem;
+        margin: 0 1.5rem 2rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .hts-step {
+        background-color: #FDFAE2;
+        padding: 2rem;
+        margin: 1.5rem;
+    }
+
+    .hts-steps {
+        gap: 0;
+    }
+
+    .hts-step-header {
+        gap: 1.05rem;
+        justify-content: flex-start;
+    }
+
+    .hts-step-number {
+        font-size: 3rem;
+        max-width: 9rem;
+        text-align: left;
+    }
+
+    .hts-step-header h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    .hts-step-content p {
+        font-size: 20px;
+        line-height: 1.4;
+    }
+
+    .hts-bottom-asset img {
+        display: none;
+    }
+
+    .hts-mobile-bg {
+        display: none;
+    }
+}
+
+/* Phones (≤720px) */
+@media (max-width: 720px) {
+    .hts-wrapper {
+        padding: 20px;
+    }
+
+    .hts-header {
+        font-size: 40px;
+    }
+
+    .hts-subtext {
+        font-size: 20px;
+    }
+
+    .hts-step {
+        background-color: #FDFAE2;
+        padding: 2rem;
+    }
+
+    .hts-step-number {
+        font-size: 40px;
+    }
+
+    .hts-step-header h2 {
+        font-size: 20px;
+    }
+
+    .hts-step-content p {
+        font-size: 18px;
+        line-height: 1.4;
+        margin: 0 0 5px;
+    }
+
+    .hts-header,
+    .hts-subtext {
+        text-align: center;
+    }
+
+    .hts-bottom-asset {
+        display: none !important;
+    }
+}
+
+/* Extra Small Phones (≤375px) */
+@media (max-width: 375px) {
+    .hts-header {
+        font-size: 35px;
+    }
+
+    .hts-subtext {
+        font-size: 20px;
+    }
+
+    .hts-step-number {
+        font-size: 35px;
+    }
+
+    .hts-step-header h2 {
+        font-size: 18px;
+    }
+
+    .hts-step-content p {
+        font-size: 15px;
+    }
+
+    .hts-header,
+    .hts-subtext {
+        text-align: center;
+    }
+
+    .hts-bottom-asset {
+        display: none !important;
+    }
+}
+
+
+/* MOBILE BG AND ASSETS */
+/* Mobile BG Image */
+.hts-mobile-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('assets/6_mobile-bg.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hts-mobile-bottom-assets {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .hts-mobile-bg {
+        display: block;
+    }
+
+    .hts-mobile-bottom-assets {
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+
+    .hts-mobile-bottom-assets img {
+        width: 100%;
+        height: auto;
+        max-width: auto;
+    }
+
+    .hts-header-section {
+        position: relative;
+    }
+}
+
+@media (max-width: 500px) {
+    .hts-header {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 330px) {
+    .hts-header {
+        font-size: 2rem;
+    }
+}
