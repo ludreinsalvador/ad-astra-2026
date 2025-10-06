@@ -10,6 +10,8 @@ Assigned sections in the AD ASTRA 2026 Website development for graduating studen
 
 This contains my assigned sections and informational pages for AA2026 subscription website. It includes user agreements on privacy policy notice, terms and conditions, and assets.
 
+**ROLE**: Front-End Developer
+
 ## Pages
 
 - **How to Subscribe** (`hts.html`) - Step-by-step subscription guide
